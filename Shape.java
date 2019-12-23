@@ -7,7 +7,7 @@ interface area
        } 
 interface parameter
 	{   
-    double para(double x,double y);  
+    double para(double x,double y);
 	}
     
 class Squre implements area,parameter    
@@ -46,26 +46,22 @@ class cir implements area,parameter
        }  
    }    
     
-class Shape    
+class Shape
   {    
      public static void main(String arg[])    
        {    
 			Squre s = new Squre();
 			Rect r = new Rect();
 			cir c = new cir();    
-			area a;
-			parameter p;		
-			a = s;    
-			System.out.println("\nArea of Squre is : " +a.areaAll(10,20));
-			System.out.println("\nParameter of Squre is : " + p.para(10,20));
+					   
+			System.out.println("\nArea of Squre is : " + s.areaAll(10,20));
+			System.out.println("\nParameter of Squre is : " + s.para(10,20));
 			
-			a = r;    
-			System.out.println("\nArea of Rectangle is : " +a.areaAll(10,20));
-			System.out.println("\nParameter of Rectangle is : " + p.para(10,20));
+			System.out.println("\nArea of Rectangle is : " + r.areaAll(10,20));
+			System.out.println("\nParameter of Rectangle is : " + r.para(10,20));
 			
-			
-			a = c;    
-			System.out.println("\nArea of Circle is : " +a.areaAll(15,15));
-			System.out.println("\nParameter of Circle is : " + p.para(10,20));
-        }   
+			System.out.println("\nArea of Circle is : " + c.areaAll(15,15));
+			System.out.println("\nParameter of Circle is : " + c.para(10,20));
+        }
+   
   }  

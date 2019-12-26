@@ -1,46 +1,46 @@
 package com.interfac;
 
-interface area    
+interface Area    
       {    
           double pi = 3.14;    
-          double areaAll(double x,double y);    
+          double area(double x,double y);    
        } 
-interface parameter
+interface Parameter
 	{   
-    double para(double x,double y);
+    double parameter(double x,double y);
 	}
     
-class Squre implements area,parameter    
+class Squre implements Area,Parameter    
    {    
-      public double areaAll(double x,double y)    
+      public double area(double x,double y)    
         {    
             return(x*x);    
          }
-      public double para(double x,double y)    
+      public double parameter(double x,double y)    
       {    
           return(4*x);    
        }   
    }
-class Rect implements area,parameter   
+class Rectangle implements Area,Parameter   
 {    
-   public double areaAll(double x,double y)    
+   public double area(double x,double y)    
      {    
          return(x*y);    
       }
-   public double para(double x,double y)    
+   public double parameter(double x,double y)    
    {    
 	   return(2*(x+y));    
     }  
    
 }    
     
-class cir implements area,parameter  
+class Circle implements Area,Parameter  
    {    
-      public double areaAll(double x,double y)    
+      public double area(double x,double y)    
         {    
             return(pi*x*x);    
          }
-      public double para(double x,double y)    
+      public double parameter(double x,double y)    
       {    
    	   return(2*pi*x);    
        }  
@@ -50,18 +50,18 @@ class Shape
   {    
      public static void main(String arg[])    
        {    
-			Squre s = new Squre();
-			Rect r = new Rect();
-			cir c = new cir();    
+			Squre squre = new Squre();
+			Rectangle rectangle = new Rectangle();
+			Circle circle = new Circle();    
 					   
-			System.out.println("\nArea of Squre is : " + s.areaAll(10,20));
-			System.out.println("\nParameter of Squre is : " + s.para(10,20));
+			System.out.println("\nArea of Squre is : " + squre.area(20,20));
+			System.out.println("\nParameter of Squre is : " + squre.parameter(20,20));
 			
-			System.out.println("\nArea of Rectangle is : " + r.areaAll(10,20));
-			System.out.println("\nParameter of Rectangle is : " + r.para(10,20));
+			System.out.println("\nArea of Rectangle is : " + rectangle.area(10,20));
+			System.out.println("\nParameter of Rectangle is : " + rectangle.parameter(10,20));
 			
-			System.out.println("\nArea of Circle is : " + c.areaAll(15,15));
-			System.out.println("\nParameter of Circle is : " + c.para(10,20));
+			System.out.println("\nArea of Circle is : " + circle.area(15,15));
+			System.out.println("\nParameter of Circle is : " + circle.parameter(10,20));
         }
    
   }  
